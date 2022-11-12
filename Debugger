@@ -1,0 +1,73 @@
+// analysis of algorithms assignment 
+public class OurFindBug {
+
+    private static int ball[];
+
+    // NO modifications to weigh() method
+    // when we put balls with consecutive IDs ranging from startID to endID (including both),
+    // weigh() method returns the weight of those balls
+    // e.g. weigh(0, 7) returns the weight of 8 balls (ID 0 to ID 7)
+    private static int weigh(int startID, int endID) {
+        int sum = 0;
+        for(int i = startID; i <= endID; ++i)
+            sum += ball[i];
+        return sum;
+    }
+
+    // TODO: the method DC(). One should NOT define any other methods
+    // ** Requirements:
+    //      1. DC() method MUST call itself inside
+    //      2. DC() method MUST call weigh() method
+    //      submissions that violate either requirement will not be graded
+    // ** Description:
+    //      DC() method is used to find the defective ball (the heavy one)
+    //      it MUST use divide-and-conquer technique to make the original problem smaller
+    //      and gradually minimize the range of balls that needs to analyze
+    // ** Return value:
+    //      it retures the ID of the defective ball
+    public static int DC(int startID, int endID) {
+    	if(startID == endID) {
+    		return startID;
+    	}
+    	int i;
+    	int half = startID + (endID - startID) / 2;
+
+    	int end = endID;
+    	//System.out.println("startID is: " +startID +" half is: "+ half +" endID is: "+ endID);
+
+    	int l = weigh(startID, half);
+    	int r = weigh(half+1, endID);
+    	//System.out.println("this is left weight: " + l);
+    	//System.out.println("this is right weight: " + r);
+    	//System.out.println("calling DC again: ");
+    	if(l>r) {
+    		return DC(startID,half);
+    	}
+    	else {
+    		return DC(half+1, endID);
+    	}
+    }
+
+    // You should NOT modify anything in the main() method
+    public static void main(String[] args) {
+        // all balls have the same weight
+        ball = new int[64];
+        for(int i = 0; i < ball.length; ++i)
+            ball[i] = 1;
+
+        // except the defective ball, which is heavier than others
+        int defectID = (int)(Math.random() * 64);
+        ball[defectID] = 2;
+        System.out.println("defective ball ID is " + defectID);
+
+        // use the method DC() to find the defective ball by divide-and-conquer method
+        int myFinding = DC(0, ball.length - 1);
+        System.out.println("the ball I found is ID " + myFinding);
+
+
+       if(defectID == myFinding)
+            System.out.println("You are all set");
+        else
+            System.out.println("You need to debug");
+    }
+}
