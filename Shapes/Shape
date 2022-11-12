@@ -1,0 +1,7 @@
+	// this is a shapes project with an interface and multiple classes that prints out shape areas, etc.
+  //This interface is implemented by all Shape classes. Each can return its name, area, and perimeter. 
+public interface Shape {
+	 public String getName(); 
+	 public double getArea(); 
+	 public double getPerim();
+}
