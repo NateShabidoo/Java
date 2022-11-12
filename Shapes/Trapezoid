@@ -1,0 +1,26 @@
+
+public class Trapezoid implements Shape {
+	private String name;  // Instance variable. 
+	private double base; // Instance variable.
+	private double base2;  // Instance variable.
+	private double height; //Instance variable.
+	
+	public Trapezoid (String n, double b, double b2, double h) 
+	{ // Constructor. 
+		name = n;
+		base = b;
+		base2 = b2;
+		height = h;
+		}
+	
+	public String getName() {   //instance method
+		return name; }
+	
+	public double getArea() {  //instance method
+		return 0.5 * (base + base2) * height; 
+		}
+	
+	public double getPerim() {  //instance method
+		return base + base2 + height + height;
+}
+}
