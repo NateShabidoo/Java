@@ -1,0 +1,15 @@
+public class advanced extends Calculator {
+
+	
+		public float mod(float m, float n) {
+			return m%n;
+		}
+		public float sqr(float m) {
+			return m*m;
+		}
+		public double sqrt(double m) {
+			return Math.sqrt(m);
+		}
+		
+	
+}
