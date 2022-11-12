@@ -1,4 +1,4 @@
-
+// this is a shapes project with an interface and multiple classes that prints out shape areas, etc.
 public class Triangle implements Shape{
 	private String name;  // Instance variable. 
 	private double base; // Instance variable.
