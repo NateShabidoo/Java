@@ -1,6 +1,0 @@
-// this is a shapes project with an interface and multiple classes that prints out shape areas, etc.
-public class Square extends Rectangle {
-	public Square(String n, double side) {
-		super(n, side, side);
-	}
-}
