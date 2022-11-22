@@ -20,7 +20,7 @@ public class OurGraphInList3 {
 
 
     public static void main(String[] args) {
-        // manually build a graph from FigureX on our slides
+       
         // ourVertexNode is an array of linked list:
         //      -> each linked list object reference represents a vertex in the graph
         //      -> e.g. the first reference represents node A, the 2nd reference represents node B, etc...
