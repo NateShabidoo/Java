@@ -1,6 +1,6 @@
 import java.util.*;
 
-// this assignment was to build a graph/tree (each link has a weight and each node has a letter) based off a graphic provided by the Professor
+// build a graph/tree (each link has a weight and each node has a letter) based off a graphic provided by the Professor
 public class OurGraphInList3 {
 
     // internal class used to create a node in the grade list representation
@@ -29,7 +29,7 @@ public class OurGraphInList3 {
         //      -> e.g. the first reference links all nodes that are reachable by node A, etc...
         // to code it out, we use ArrayList class and integrate LinkedList class in it
 
-        // because FigureX on our slides has 5 nodes, so that the size of the arrayList is 5
+        // FigureX has 5 nodes, so that the size of the arrayList is 5
         ArrayList<LinkedList<ourEdgeNode>> ourVertexNode = new ArrayList<>(7);
         for(int i = 0; i < 7; ++i) {
             ourVertexNode.add(new LinkedList<ourEdgeNode>());
@@ -79,7 +79,7 @@ public class OurGraphInList3 {
         tmp.addLast(new ourEdgeNode(4, 2));
         tmp.addLast(new ourEdgeNode(5, 6));
 
-        // print the graph from the list representation we built
+        // this prints the graph from the list representation we built
         for(int i = 0; i < ourVertexNode.size(); ++i) {
             // get the current linked list in order to print its linked nodes
             tmp = ourVertexNode.get(i);
