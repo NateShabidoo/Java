@@ -1,6 +1,7 @@
 package bank;
 
-//This is a multi-class object based banking app which allows users to deposit and withdraw from checking and savings once entering the correct ID number and PIN
+//This is a multi-class object based banking app which allows users to deposit and withdraw from checking 
+//and savings once entering the correct ID number and PIN
 
 public class Trial {
     
