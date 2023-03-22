@@ -1,3 +1,4 @@
+//Takes 2 user inputs: IPv4 address and Subnet Mask of a machine and calculates Subnet ID
 import java.util.*;
 
 public class IPinput {
