@@ -1,3 +1,5 @@
+//this file takes in a sentence and finds the longest word in the sentence
+
 public class LongestWord {
 
 public static void main(String[] args) {
